@@ -34,8 +34,9 @@ yat:
 #theme: minima
 #plugins:
 #  - jekyll-feed
+#permalink: pretty
 permalink: /:categories/:title
-
+excerpt_separator: <!--more-->
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
@@ -60,7 +61,7 @@ permalink: /:categories/:title
 # debug: false
 
 # If you don't want transparent header, you can set false
-# header_transparent: true
+header_transparent: false
 
 # Google analytics
 # google_analytics: [Tracking ID]
