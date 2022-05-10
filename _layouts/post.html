@@ -25,6 +25,11 @@ sidebar:
 
     {%- include views/article.html -%}
 
+    {%- assign result = hidden | where_exp: "item", "item == 'reward'" -%}
+    {%- if result.size == 0 -%}
+    {% include views/reward.html %}
+    {%- endif -%}
+
     {%- assign result = hidden | where_exp: "item", "item == 'navigator'" -%}
     {%- if result.size == 0 -%}
     <div class="post-nav">
