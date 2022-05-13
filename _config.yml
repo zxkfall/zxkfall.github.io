@@ -104,13 +104,14 @@ header_transparent: false
 # You can choose a theme color
 # Default theme colors as below:
 # coolblack: #090a0b
-# spacegrey: #353535
+#spacegrey: #353535
 # snowwhite: #ffffff
 #
 # theme_color: snowwhite
+#theme_color: spacegrey
 #
 # Custom color as below:
-# theme_color: "#882250"
+#theme_color: "#882250"
 
 # You can choose a brand color
 # Default brand colors as below:
@@ -177,7 +178,7 @@ header_transparent: false
 #   subheading_style: null  # Custom subheading style (e.g. color: gold)
 
 # Excerpt size setting
-# excerpt_size: 350
+excerpt_size: 70
 
 # Pagination setting
 paginate: 10

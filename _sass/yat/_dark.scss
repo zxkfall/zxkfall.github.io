@@ -116,8 +116,15 @@ html[data-theme="dark"]  {
     }
 
     .post-list {
-      & > li:not(:last-child) {
-        border-bottom: 1px solid #545454;
+      //& > li:not(:last-child) {
+      //  border-bottom: 1px solid #545454;
+      //}
+      & > li {
+        box-shadow: 0 1px 20px -6px rgba(150, 58, 183, 0.65);
+
+        &:hover {
+          box-shadow: 0 5px 10px 5px rgba(150, 58, 183, 1);
+        }
       }
     }
 
@@ -168,7 +175,7 @@ html[data-theme="dark"]  {
 
   .common-list {
     li {
-      border-bottom: solid 1px #40404088;
+      //border-bottom: solid 1px #40404088;
 
       a {
         color: #aaa;
