@@ -8,7 +8,10 @@
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+          // https://cdn.bootcdn.net/ajax/libs/analytics.js/2.9.1/analytics.js
+      //    https://cdn.bootcdn.net/ajax/libs/analytics.js/2.9.1/analytics.min.js
+      //     https://cdn.bootcdn.net/ajax/libs/analytics.js/2.9.1/analytics.min.js
+      })(window,document,'script','../assets/js/http_cdn.bootcdn.net_ajax_libs_analytics.js_2.9.1_analytics.js','ga');
 
       ga('create', '{{ site.google_analytics }}', 'auto');
       ga('send', 'pageview');
