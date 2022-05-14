@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll-theme-yat (1.8.0)
+    jekyll-theme-autumn (1.0.0)
       jekyll (> 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-paginate (~> 1.1)
@@ -92,7 +92,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (>= 1.6, < 3.0)
-  jekyll-theme-yat!
+  jekyll-theme-autumn!
   rake (>= 12.0, < 13.0)
 
 BUNDLED WITH
