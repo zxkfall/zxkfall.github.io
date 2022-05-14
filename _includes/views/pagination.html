@@ -36,9 +36,6 @@
                 <a class="post-excerpt" href="{{ post_url }}">
                     <p>
                         {{ excerpt }}
-<!--                    <div>-->
-<!--                        <span class="read_more">Read More</span>-->
-<!--                    </div>-->
                     </p>
                 </a>
                 <div class="post-tags">
@@ -47,8 +44,8 @@
                     {%- endfor -%}
                 </div>
             </div>
-            <div class="post-img">
-                <img src="{{ post.banner }}" alt="{{ banner_array.last }}">
+            <div class="post-img lazy" data-src="{{ post.banner }}">
+<!--                <img src="{{ post.banner }}" alt="{{ banner_array.last }}">-->
             </div>
 
         </li>

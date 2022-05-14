@@ -1,0 +1,57 @@
+<script>
+    /**
+     * 另一种实现思路，使用时，先新建被div包裹的img标签，
+     * 这样就不需要重新创建元素，直接给lazy里面的img标签赋值即可
+     * 但是缺点就是一定几率用户会看到加载失败的图片样式，影响体验
+     * 可以通过背景图片，增大判断距离来解决
+     *
+     * 下面的实现思路是为每个添加了lazy的元素添加标签，
+     * 只要处于可视范围，就新建img元素，并且为lazy元素设置属性，
+     * 只要设置了属性为true，代表已经创建了元素，即已经加载，
+     * 就不需要重新加载了
+     */
+    const lazyLoad = (imgContainers) => {
+        //窗口高度
+        const windowHeight = window.innerHeight;
+        //滚动条滚动距离
+        const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        for (let i = 0; i < imgContainers.length; i++) {
+            const imgContainer = imgContainers[i];
+            const offsetTop = imgContainer.offsetTop;
+            const loaded = imgContainer.getAttribute('data-loaded');
+            //滚动+窗口的高度>图片元素到顶部的距离
+            //这时图片在窗口
+            // <----windowHeight + scrollTop---->
+            // <-----------offsetTop------------>imageContainer
+            //如果图片显示了，并且没有加载过，就加载图片，防止重复创建img
+            const isShow = (windowHeight + scrollTop + 256) > offsetTop;
+            if (isShow && loaded === 'false') {
+                const img = document.createElement('img');
+                const imgSrc = imgContainer.getAttribute('data-src');
+                img.src = imgSrc;
+                img.alt = imgSrc.split("/").pop()
+                imgContainer.appendChild(img)
+                imgContainer.setAttribute('data-loaded', 'true')
+            }
+        }
+    };
+
+    //HTML元素都加载完毕了再添加事件
+    window.addEventListener('load', () => {
+        const imgContainers = document.querySelectorAll('.lazy');
+        for (let i = 0; i < imgContainers.length; i++) {
+            imgContainers[i].setAttribute('data-loaded', 'false')
+        }
+        //有时即使元素都加载完毕了，网页还是空白，所以延迟
+        //但是这里延迟可以去掉，只保留lazyLoad()，
+        // 因为实际的要求往往是只要请求网页就马上加载可视的图片，加了延迟反而显得有些卡
+        setTimeout(() => {
+            lazyLoad(imgContainers)
+        }, 50)
+        //只要滚动，就检测是不是需要请求图片
+        window.addEventListener('scroll', () => {
+                lazyLoad(imgContainers);
+            }
+        )
+    })
+</script>
