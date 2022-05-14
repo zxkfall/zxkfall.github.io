@@ -12,7 +12,8 @@
         <li>
             {%- assign date_format = site.yat.date_format | default: "%b %-d, %Y" -%}
 
-            {% assign article = post.excerpt %}
+            {% assign article = post.content %}
+            {% assign excerpt = post.excerpt %}
             {% assign lang = post.lang %}
             {%- include functions.html func='get_reading_time' -%}
             {% assign reading_time = return %}
@@ -20,7 +21,7 @@
             {% assign excerpt = return %}
             {%- assign post_url = post.url | relative_url -%}
 
-            {% assign banner_array = post.banner | split: "/" %}
+            {% assign banner_array = post.banner | split: '/' %}
 
             <div class="post-text">
                 <h2 class="post-title">

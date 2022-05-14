@@ -1,5 +1,7 @@
-{% if include.params.article %}
-  {% assign article = include.params.article %}
+{% if include.params.excerpt %}
+  {% assign excerpt = include.params.excerpt %}
+{% elsif include.params.article %}
+  {% assign excerpt = include.params.article %}
 {% endif %}
 
 {% if include.params.lang %}
@@ -16,11 +18,11 @@
     | default: 350 %}
 {% endif %}
 
-{%- include functions.html func='get_article_words' -%}
+{%- include functions.html func='get_excerpt_words' -%}
 {% assign words = return %}
 
-{% assign _article = article | strip_html %}
-{% assign _words = _article | size %}
+{% assign _excerpt = excerpt | strip_html %}
+{% assign _words = _excerpt | size %}
 
 {% assign _size = excerpt_size %}
 
@@ -36,4 +38,4 @@
   {% assign _size = excerpt_size %}
 {% endif %}
 
-{% assign return = _article | truncate: _size %}
+{% assign return = _excerpt | truncate: _size %}
