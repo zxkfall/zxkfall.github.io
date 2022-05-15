@@ -11,6 +11,9 @@
             <div class="footer-col rss-subscribe">Subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></div>
     </div>
   </div>
+    {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include extensions/google-analytics.html -%}
+    {%- endif -%}
 </footer>
 {%- if jekyll.environment == 'production' and site.google_analytics -%}
 {%- include extensions/google-analytics.html -%}
