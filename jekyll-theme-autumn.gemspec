@@ -7,7 +7,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["zxkfall@gmail.com"]
 
   spec.summary       = "Autumn theme based on yat theme and support night/dark mode."
-  spec.homepage      = "https://github.com/jeffreytse/jekyll-theme-yat"
+  spec.homepage      = "https://github.com/zxkfall/zxkfall.github.io"
   spec.license       = "MIT"
 
   spec.metadata["plugin_type"] = "theme"
