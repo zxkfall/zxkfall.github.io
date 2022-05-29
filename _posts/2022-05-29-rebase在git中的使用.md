@@ -7,7 +7,7 @@ tags: [ git, rebase, idea]
 banner: "/assets/images/cover/2022-05-29-white.jpg"
 ---
 
-rebase命令是git中非常常见的一个命令，只要我们需要多人或者多设备协作，如果我们我们想让我们的分支看起来更加更见干净，那么就离不开rebase这个命令，下面介绍了如何在命令行和IDEA中使用rebase命令
+rebase命令是git中非常常见的一个命令，只要我们需要多人或者多设备协作，如果我们想让我们的分支看起来更加更见干净，那么就离不开rebase这个命令，下面介绍了如何在命令行和IDEA中使用rebase命令
 
 <!--more-->
 
