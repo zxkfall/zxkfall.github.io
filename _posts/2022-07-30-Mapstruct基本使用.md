@@ -4,7 +4,7 @@ title: "Mapstruct基本使用"
 subtitle: Mapstruct basic using
 categories: java
 tags: [ java, mapstruct, bean]
-banner: "/assets/images/cover/2022-07-26-wallhaven-6k3oox.jpg"
+banner: "/assets/images/cover/2022-07-30-universe.jpg"
 
 ---
 
